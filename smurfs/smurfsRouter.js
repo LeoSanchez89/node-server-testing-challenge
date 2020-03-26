@@ -12,15 +12,15 @@ router.get("/", (req, res) => {
 		});
 });
 
-router.get("/:id", (req, res) => {
-	Smurfs.findById(req.params.id)
-		.then(smurf => {
-			res.status(200).json(smurf);
-		})
-		.catch(error => {
-			res.status(500).json({ error: "error fetching smurfs", error });
-		});
-});
+// router.get("/:id", (req, res) => {
+// 	Smurfs.findById(req.params.id)
+// 		.then(smurf => {
+// 			res.status(200).json(smurf);
+// 		})
+// 		.catch(error => {
+// 			res.status(500).json({ error: "error fetching smurfs", error });
+// 		});
+// });
 
 router.post("/", (req, res) => {
 	Smurfs.insert(req.body)
